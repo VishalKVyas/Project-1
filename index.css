@@ -1,0 +1,379 @@
+*{
+     margin: 0%;
+    padding: 0%;
+    /* background-color: lightgray; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+#off{
+    background-color: rgb(191,215,239);
+    padding: 10px;
+    text-align: center;
+}
+#off:hover{
+    cursor: pointer;
+}
+#off>p::before {  
+   content: "Get up to 50% Off*";
+    color: red;
+}
+#off>p::after{
+    content: " SHOP NOW >";
+    font-weight: bold;
+}
+#search{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+#search img{
+    width: 10%;
+}
+.searchright{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#search a{
+    text-decoration: none;
+    color: gray;
+}
+
+/* NAVBAR START */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    padding-left: 5%;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content>#split{
+    display: flex;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* NAVBAR END */
+
+#upperimg{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1%;
+    position: relative;
+}
+#upperimg>div>h3{
+    width: 80%;
+    padding-left: 2%;
+}
+
+#upperimg>div>p{
+    width: 80%;
+    padding-left: 2%;
+}
+#upperimg>div>h5{
+    width: 80%;
+    padding-left: 2%;
+}
+#upperimg>div>h3>a{
+    text-decoration: none;
+    color: black;
+}
+#upperimg>div>p>a{
+    text-decoration: none;
+    color: black;
+}
+#upperimg>div>h5>a{
+    text-decoration: none;
+    color: black;
+}
+#chosen{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    
+}
+.im{
+    width: 80%;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+.im:hover{
+    cursor: pointer;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    
+}
+.im img{
+    width: 80%;
+}
+#newarival{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+}
+#newarival>div>a{
+    text-decoration: none;
+    padding-right: 10px;
+}
+#newarivl{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+.imgnew{
+    width: 80%;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.imgnew:hover{
+    cursor: pointer;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    
+}
+.im img{
+    width: 80%;
+}
+#middletree{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+
+}
+.middle{
+    border-radius: 5%;
+}
+#middletree>div{
+    padding-top: 2%;
+  
+}
+#fenty{
+    background-color: rgb(246,215,195);
+    color: black;
+    padding-bottom: 4%;
+    padding-left: 1%;
+    padding-top: 2%;
+    margin-top: 0%;
+}
+#fenty>h4{
+    padding-right: 5%;
+}
+#fenty>button{
+    background-color: rgb(246,215,195);
+    color: black;
+    border: none;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+#easy{
+    background-color: rgb(0,0,0);
+    color: white;
+    padding-bottom: 5%;
+    padding-left: 1%;
+    padding-top: 2%;
+    margin-top: 0%;
+}
+#easy>button{
+    background-color: rgb(0,0,0);
+    color: white;
+    border: none;
+    padding-top: 5%;
+    padding-left: 2%;
+}
+#easy>h4{
+    padding-right: 5%;
+}
+#they{
+    background-color: rgb(218,104,104);
+    color: black;
+    padding-bottom: 5%;
+    padding-left: 1%;
+    padding-top: 0%;
+    padding-top: 2%;
+    margin-top: 0%;
+}
+#they>button{
+    background-color: rgb(218,104,104);
+    color: black;
+    border: none;
+    padding-top: 5%;
+    padding-left: 2%;
+    font-weight: bold;
+}
+.middle button:hover{
+    cursor: pointer;
+    border-bottom: black;
+}
+#featured{
+    margin: 2%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 3%;
+    
+}
+#rightfeatured{
+    display: flex;
+    gap: 10px;
+    
+}
+#rightfeatured>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px;
+}
+#rightfeatured img{
+    width: 60%;
+    justify-content: end;
+    align-items: center;
+    
+}
+#little{
+    margin: 2%;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 3%;
+}
+#rightlittle{
+    display: flex;
+    gap: 10px;
+}
+.txtimglit{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.imagetag img{
+    width: 60%;
+}
+
+/* Footer Start*/
+#flink{
+    text-align: center;
+    background-color: rgb(204,204,204);
+    padding: 1%;
+    font-size: large;
+}
+#flink:hover{
+    cursor: pointer;
+}
+#footerlast{
+    display: flex;
+    background-color: black;
+    color: white;
+    gap: 70px;
+    
+}
+#footerlast a{
+    color: white;
+    text-decoration: none;
+}
+#footerlast a:hover{
+    text-decoration: underline;
+}
+
+#footerlast>div{
+    padding: 10px;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    
+}
+#footerlast>div>p{
+    padding: 5px;
+    font-size: medium;
+}
+
+
+#lastfooter{
+    background-color: black;
+    padding: 2%;
+    padding-top: 2%;
+    border-top: 1px solid grey;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+#lastfooter>div>p{
+    padding-bottom: 10px;
+}
+#lastfooter>div>p~p{
+    padding-top: 10px;
+}
+#lastfooter a{
+    color: white;
+    padding-right: 10px;
+    text-decoration: none;
+}
+#lastfooter a:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+#flexfooter{
+    display: flex;
+    gap: 10%;
+    padding-right: 10%;
+}
+#flexfooter:hover{
+    cursor: pointer;
+}
+/* Footer End */

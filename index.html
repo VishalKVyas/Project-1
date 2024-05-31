@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sephora.com Clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="off"><p> select makeup, hair care, and more. "While supplies last Terms apply</p></div>
+    </div>
+    <div id="search">
+        <img src="data:image/png;base64,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" alt="logo">
+        <input type="search" placeholder="search"  style="border-radius: 30px;width: 20% ;height: 30px;<span  style="text-align: center class="material-symbols-outlined">
+      </span>
+       
+        <div class="searchright">
+            <div><span class="material-symbols-outlined">
+                store
+                </span></div>
+            <div><h4><a href="*">Stores & Services</a></h4>
+            <p><a href="*">Choose Your Store</a></p></div>
+        </div>
+        <div class="searchright">
+            <div><span class="material-symbols-outlined">
+                diversity_3
+                </span></div>
+            <div><a href="*">community</a></div>
+        </div>
+        <div class="searchright">
+            <div><span class="material-symbols-outlined">
+                face_3
+                </span></div>
+            <div><h4><a href="*">Sign In    </a></h4>
+            <a href="*">for FREE Shipping<span style="font-size: small;color: rgba(119, 129, 10, 0.835);" class="material-symbols-outlined">
+                local_shipping
+                </span></a></div>
+        </div>
+        <div class="searchright">
+            <div><span class="material-symbols-outlined">
+                favorite
+                </span><span class="material-symbols-outlined">
+                    shopping_basket
+                    </span></div>
+           
+        </div>
+    </div>
+    
+    <!-- NAVBAR START -->
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">New 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href="#">Just Dropped</a>
+                    <a href="#">New Makeup</a>
+                    <a href="#">New skincare</a>
+                    <a href="#">New Hair Care</a>
+                    <a href="#">New Fragrance</a>
+                    <a href="#">New Bath & Body</a>
+                    <a href="#">New Tools & Brushes</a>
+                    </div>
+                    <div>
+                      <a href="">Bestsellers</a>
+                      <a href="">Trending on Social</a>
+                      <a href="">Refillable Beauty Products</a>
+                      <a href="">Quizzes & Buying gudes</a>
+                      <a href="">Clean Beauty</a>
+                      <a href="">Planet Aware Beauty</a>
+                      <a href="">FSA $ HSA Eligible</a>
+                    </div>
+                    <div>
+                      <img src="https://www.sephora.com/contentimages/meganav/large/2024-5-19-dior-lilac-collection-site-desktop-global-navigation-button-en-us-can-b.jpg?imwidth=294" alt="">
+                      <img src="https://www.sephora.com/contentimages/2024-may-skin-spf-site-desktop-universal-navigation-button-us-2053.jpg?imwidth=294" alt="">
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Brands 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>Brands A-Z</h4></a>
+                    <a href=""><h4>SEPHORA COLLECTION</h4></a>
+                    <a href=""><h6>New Brands</h6></a>
+                    <a href="">Dr Idriss</a>
+                    <a href="">AAVRANI</a>
+                    <a href="">Jean Paul Gaultier</a>
+                    <a href="">Prada Beauty</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Only At Sephora</h4></a>
+                        <a href="">Sale</a>
+                        <a href="">MAKEUP BY MARIO</a>
+                        <a href="">dae</a>
+                        <a href="">Nette</a>
+                        <a href="">Rare Beauty by Selena Gomez</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Affordable Brands</h4></a>
+                        <a href="">SEPHORA COLLECTION </a>
+                        <a href="">The Ordinary</a>
+                        <a href="">The Inkey List</a>
+                        <a href="">Verb</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Black-Owned Brands</h4></a>
+                        <a href="">PATTERN By Tracee Ellis</a>
+                        <a href="">world of Chris Collins</a>
+                        <a href="">FENTY fragrance</a>
+                        <a href="">BREAD BEAUTY SUPPLY</a>
+                        <a href="">Melanin Haircare</a>
+                        <a href="">Fashion Fair</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Clean at Sephora</h4></a>
+                        <a href="">Kosas</a>
+                        <a href="">Maison Louis Marie</a>
+                        <a href="">amika</a>
+                        <a href="">Living</a>
+                    </div>
+              </div>
+            </div>
+          </div>    
+          <div class="dropdown">
+            <button class="dropbtn">Makeup 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>Face</h4></a>
+                    <a href="">Foundation</a>
+                    <a href="">BB & CC cream</a>
+                    <a href="">Tinted Moisturizer</a>
+                    <a href="">concealer</a>
+                    <a href="">Face Primer</a>
+                    <a href="">Setting Spray & Powder</a>
+                    <a href="">Highlighter</a>
+                    <a href="">contour</a>
+                    <a href="">color Correct</a>
+                    <a href="">Face Sets</a>
+                </div>
+                    <div>
+                        <a href=""><h4>Eye</h4></a>
+                        <a href="">Eye Palettes</a>
+                        <a href="">Mascara</a>
+                        <a href="">Eyeliner</a>
+                        <a href="">Eyebrow</a>
+                        <a href="">False Eyelashers</a>
+                        <a href="">eyeshadow</a>
+                        <a href="">Eyelash Serums</a>
+                        <a href="">Eyebrow Scrums</a>
+                        <a href="">
+                            Eye Primer</a>
+                        <a href="">Eye Sets</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Lip</h4></a>
+                        <a href="">Lip Gloss</a>
+                        <a href="">Lipstick</a>
+                        <a href="">Lip Oil</a>
+                        <a href="">Lip Plumper</a>
+                        <a href="">Lip Balms & Treatments</a>
+                        <a href="">Liquid Lipstick</a>
+                        <a href="">Lip Liner</a>
+                        <a href="">Lip Stain</a>
+                        <a href="">Lip Sets</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Cheek</h4></a>
+                        <a href="">Blush</a>
+                        <a href="">Bronzer</a>
+                        <a href="">Highligter</a>
+                        <a href="">contour</a>
+                        <a href="">Cheek Palettes</a>
+                        <a href=""><h4>Value & Gift Sets</h4></a>
+                        <a href=""><h4>Makeup Palettes</h4></a>
+                        <a href="">Brushes & Applicators</a>
+                        <a href="">Accessories</a>
+                        <a href="">Nail</a>
+                    </div>
+                    <div>
+                        <a href=""><h4></h4>New</a>
+                        <a href=""><h4></h4>Bestsellers</a>
+                        <a href=""><h4></h4>Clean Makeup</a>
+                        <a href=""><h4></h4>Vegan Makeup</a>
+                        <a href=""><h4></h4>Mini Size</a>
+                        <a href=""><h4></h4>Value Size</a>
+                        <a href=""><h4></h4>Refillable Makeup</a>
+                        <a href=""><h4></h4>Sephora Collection</a>
+                        <a href=""><h4></h4>Luxury Makeup</a>
+                        <a href=""><h4></h4>Black-Owned Brands Makeup</a>
+                    </div>
+                    <div>
+                        <a href=""><h4></h4>Help Me Choose</a>
+                        <a href="">Easy Eye Makeup</a>
+                        <a href="">Foundation Quiz</a>
+                        <a href="">Lip Quiz</a>
+                        <a href="">Brow Quiz</a>
+                        <a href="">Complexion Routine Builder</a>
+                        <a href="">Guide To Foundations</a>
+                        <a href="">Clean Makeup Guide</a>
+                        <a href="">No Makeup Makeup</a>
+                        <a href="">Super-Natural Sculpting</a>
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Skincare 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Skincare</h4></a>
+                    <a href=""><h4>Moisturizers</h4></a>
+                    <a href="">Night Creams</a>
+                    <a href="">Face Oils</a>
+                    <a href="">Misis & Essences</a>
+                    <a href="">BB & CC Cream</a>
+                    <a href=""><h4>Cleansers</h4></a>
+                    <a href="">Face Wash & Cleaners</a>
+                    <a href="">Exfoliators</a>
+                    <a href="">Makeup Removers</a>
+                    <a href="">Face Wipes</a>
+                    <a href="">toners</a>
+                </div>
+                <div>
+                    <a href=""><h4>Treatments</h4></a>
+                    <a href="">Face Serums</a>
+                    <a href="">Blemish & Acne Treatments</a>
+                    <a href="">Facial Peels</a>
+                    <a href=""><h4>Masks</h4></a>
+                    <a href="">Face Masks</a>
+                    <a href="">Sheet Masks</a>
+                    <a href="">Eye Masks</a>
+                </div>
+                <div>
+                    <a href=""><h4>Eye Care</h4></a>
+                    <a href="">Eye Creams & Treatments</a>
+                    <a href="">Eye Masks</a>
+                    <a href=""><h4>Lip Balms & Treatments</h4></a>
+                    <div>
+                        <a href=""><h4>Sunscreen</h4></a>
+                        <a href="">Face Sunscreen</a>
+                        <a href="">Body Sunscreen</a>
+                        <a href=""><h4>High Tech Tools</h4></a>
+                        <a href=""><h4>Wellness</h4></a>
+                        <a href="">Supplements</a>
+                        <a href="">Feminine Care</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Hair 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Hair</h4></a>
+                    <a href=""><h4>Shampoo & Conditioner</h4></a>
+                    <a href="">shampoo</a>
+                    <a href="">conditioner</a>
+                    <a href="">Scalp Scrub</a>
+                </div>
+                    <div>
+                        <a href=""><h4></h4>Treatments</a>
+                        <a href="">Hair Masks</a>
+                        <a href="">Leave-in conditioner</a>
+                        <a href="">hair Oil</a>
+                        <a href="">Hair Serums</a>
+                        <a href="">Hair supplements</a>
+                    </div>
+              </div>
+              <div>
+                <a href=""><h4>Styling</h4></a>
+                <a href="">Styling Creams & Sprays</a>
+                <a href="">Dry Shampoo</a>
+                <a href="">Hair Primers & Heat Protectants</a>
+                <a href="">Hair Spray</a>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Fragrance 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Fragrance</h4></a>
+                    <a href=""><h4>women</h4></a>
+                    <a href="">Perfume</a>
+                    <a href="">Perfume Oils</a>
+                    <a href="">Rollerballs & Travel size</a>
+                    <a href="">Body Mist & Hair Mist</a>
+                    <a href=""><h4>Men</h4></a>
+                    <a href="">cologne</a>
+                    <a href=""><h4>Unisex / 
+                        Genderless</h4></a>
+                </div>
+                    <div>
+                        <a href=""><h4>Value & Gift Sets</h4></a>
+                        <a href="">Perfume Gift sets</a>
+                        <a href="">cologne Gift Sets</a>
+                        <a href="">Home Gift Sets</a>
+                        <a href="">Sephora Favorites</a>
+                    </div>
+                    <div>
+                        <a href=""><h4>Candles & Home scents</h4></a>
+                        <a href="">Canles</a>
+                        <a href="">Diffusers</a>
+                        <a href=""><h4>Shop by Fragrace Family</h4></a>
+                        <a href="">floral</a>
+                        <a href="">Warm & spicy</a>
+                        <a href="">Fresh</a>
+                        <a href="">Earthy & Woody</a>
+                    </div>
+                    <div>
+                        <a href="">New<h4></h4></a>
+                        <a href=""><h4></h4>Bestsellers</a>
+                        <a href=""><h4></h4>clean fragrance</a>
+                        <a href="">Vegan Fragrance<h4></h4></a>
+                        <a href=""><h4>Mini size</h4></a>
+                        <a href=""><h4>Value Size</h4></a>
+                        <a href=""><h4>Refillable Fragrance</h4></a>
+                        <a href=""><h4>Luxury Fragrance</h4></a>
+                        <a href=""><h4>Black-Owned Brands Fragrance</h4></a>
+
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Tools & Brushes 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Tools & Brushes</h4></a>
+                    <a href=""><h4>Sephora Collection</h4></a>
+                    <a href=""><h4>Brushes & Applicators</h4></a>
+                    <a href="">Brush Sets</a>
+                    <a href="">Face Sets</a>
+                    <a href="">Face Brushes</a>
+                    <a href="">Eye Brushes</a>
+                    <a href="">Lip Brushes</a>
+                    <a href="">Spongers & Applicators</a>
+                </div>
+                    <div>
+                        <a href=""><h4></h4>Hair Tools</a>
+                        <a href="">Hair Dryers</a>
+                        <a href="">Straighteners & Flat Irons</a>
+                        <a href="">Curing Irons</a>
+                        <a href="">Brushes & Combs</a>
+                        <a href="">Acessories</a>
+                        <a href=""><h4>Wellness</h4></a>
+                        <a href="">Wellness Tools & Devices</a>
+                        <a href="">Vibrators</a>
+                    </div>
+                    <div>
+                        <img style="padding-top: 5%;" src="https://www.sephora.com/contentimages/meganav/large/2023-8-7-sc-sku-site-desktop-global-navigation-button-en-us.jpg?imwidth=294" alt="">
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Bath & Body 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Bath & Body</h4></a>
+                    <a href=""><h4>Bath & Shower</h4></a>
+                    <a href="">Body Wash & shower Gel</a>
+                    <a href="">Scrubs & Exfoliants</a>
+                    <a href="">Bath soaks & Bubble Bath</a>
+                    <a href="">Hand Sanitizer & Hand Soap</a>
+                    <a href=""><h4>Body Moisturizers</h4></a>
+                    <a href="">Body Lotions & Body Oils</a>
+                    <a href="">Hand Cream & Foot Cream</a>
+                </div>
+                    <div>
+                        <a href=""><h4>Candles & Home Scents</h4></a>
+                        <a href="">Shop By Concern</a>
+                        <a href="">Stretch Marks & Firming</a>
+                        <a href="">Dryness / Dry Skin</a>
+                        <a href="">Smooth Texture</a>
+                        <a href="">Even Skin Tone & Color Correction</a>
+                    </div>
+                    <div>
+                        <img style="padding-top: 10%;" src="https://www.sephora.com/contentimages/meganav/large/2023-12-XX-rare-new-exclusive-body-collection-site-desktop-global-navigation-button-en-us-can.jpg?imwidth=294" alt="">
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Mini Size 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Mini Size</h4></a>
+                    <a href=""><h4>Makeup</h4></a>
+                    <a href=""><h4>Skincare</h4></a>
+                    <a href=""><h4>Hair</h4></a>
+                    <a href=""><h4>Fragrance</h4></a>
+                    <a href=""><h4>Bath & Body</h4></a>
+                </div>
+                    <div>
+                        <a href=""><h4>Value & Gift Sets</h4></a>
+                        <a href=""><h4>$15 and Under</h4></a>
+                        <a href="">$25 and Under<h4></h4></a>
+                        <a href=""><h4>Sephora Favorites</h4></a>
+                    </div>
+              </div>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Gifts & Gifts Cards 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <div id="split">
+                <div>
+                    <a href=""><h4>All Gifts</h4></a>
+                    <a href=""><h4>Gift Finder</h4></a>
+                    <a href=""><h4>Gift Card</h4></a>
+                    <a href=""><h4>Value & Gift Sets</h4></a>
+                    <a href=""><h4>By Price</h4></a>
+                    <a href="">$10 and Under</a>
+                    <a href="">$15 and Under</a>
+                    <a href="">$25 and Under</a>
+                    <a href="">$50 and Under</a>
+                    <a href="">&75 and Under</a>
+                    <a href="">$100 and Under</a>
+                </div>
+                    <div>
+                        <a href=""><h4>By Recipient</h4></a>
+                        <a href="">For Her</a>
+                        <a href="">For Mom</a>
+                        <a href="">For Him</a>
+                        <a href="">For Teenagers</a>
+                        <a href="">For Them</a>
+                    </div>
+              </div>
+            </div>
+          </div> 
+      </div>
+
+       <!-- NAVBAR END -->
+
+      <br>   
+        <div id="upperimg">
+            <div class="mySlides" style="background-color: rgb(166,220,220);">
+                <img src="https://www.sephora.com/contentimages/2024-may-skin-spf-site-home-page-RWD-hero-banner-image-only-1200x800-us-2833.jpg?imwidth=545" alt="">
+                <h3><a href="*">HEY! Are You Wearing Sunscreen?</a></h3>
+                <p><a href="*">use it daily if the look of winkles and dark spots isn't your thing.</a></p>
+                <h5><a href="*">SHOP NOW<span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a></h5>
+    
+            </div>
+            <div class="mySlides" style="background-color: rgb(233,148,146);">
+                <img src="https://www.sephora.com/contentimages/2024-05-16-CMS-bestsellers-site-hero-banner-test-v1-US-handoff.jpg?imwidth=545" alt="">
+                <h3><a href="*">Bestselling Beauty</a></h3>
+                <p><a href="*">These fan faves are worth the hype.</a></p>
+                <h5><a href="*">SHOP NOW<span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a></h5>
+            </div>
+            <div class="mySlides" style="background-color: rgb(251,182,19);">
+                <img src="https://www.sephora.com/contentimages/2024-5-18-sol-de-janeiro-body-mists-site-desktop-home-page-rwd-hero-banner-1200x800-en-us-can.jpg?imwidth=545" alt="">
+                <h3><a href="*">New Sol de janeiro</a></h3>
+                <p><a href="*">These perfume mists are like a vacation in a bottle. Only at sephora.</a></p>
+                <h5><a href="*">SHOP NOW<span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a></h5>
+    
+            </div>
+            <div class="mySlides" style="background-color: rgb(219,176,230);">
+                <img src="https://www.sephora.com/contentimages/2024-5-14-dior-lilac-collection-site-desktop-home-page-rwd-hero-banner-1200x800-en-us-can.jpg?imwidth=545" alt="">
+                <h3><a href="*">Just in from Dior</a></h3>
+                <p><a href="*">spipe on lip and cheek picks in a new pink lilac shade.</a></p>
+                <h5><a href="*">SHOP NOW<span class="material-symbols-outlined">
+                    chevron_right
+                    </span></a></h5>
+     </div>
+ </div>
+ <br>
+ <h2 style="padding-left: 2%;">Chosen For You</h2>
+ <br>
+    <div id="chosen">
+        <div class="im">
+            <div><img src="https://www.sephora.com/productimages/sku/s2653921-main-zoom.jpg?imwidth=166" alt=""></div>
+            <div class="chosetext">
+                <h4>PATRICK TA</h4>
+                <p>Major Scuipt Creme contour & Powder...</p>
+                <h5>$40.00</h5>
+            </div>
+        </div>
+        <div class="im">
+            <div><a href="makeup.html" style="text-decoration: none
+            ;color: black;"><img src="https://www.sephora.com/productimages/sku/s2648020-main-zoom.jpg?imwidth=166" alt=""></div>
+              <div class="chosetext">
+                  <h4>MAKE BY MARIO</h4>
+                  <p>F4 Dual-ended foundatin and Face...</p>
+                  <h5>$30.00</h5></a>
+            </div>
+        </div>
+        <div class="im">
+            <div><img src="https://www.sephora.com/productimages/sku/s2790681-main-zoom.jpg?imwidth=166" alt=""></div>
+            <div class="chosetext">
+                <h4>Fara Homidi</h4>
+                <p>Essential Face compact</p>
+                <h5>$48.00-$88.00</h5>
+            </div>
+        </div>
+        <div class="im">
+            <div><img src="https://www.sephora.com/productimages/sku/s2525459-main-zoom.jpg?imwidth=166" alt=""></div>
+            <div class="chosetext">
+                <h4>SEPHORA COLLECTION</h4>
+                <p>Best Skin Even full</p>
+                <h5>$16.00</h5>
+            </div>
+        </div>
+        <div class="im">
+            <div><img src="https://www.sephora.com/productimages/sku/s2758225-main-zoom.jpg?imwidth=166" alt=""></div>
+            <div class="chosetext">
+                <h4>Iris & Romeo</h4>
+                <p>Best skin Days Treatment</p>
+                <h5>$32.00</h5>
+            </div>
+        </div>
+        <div class="im">
+            <div><img src="https://www.sephora.com/productimages/sku/s2751725-main-zoom.jpg?imwidth=166" alt=""></div>
+            <div class="chosetext">
+                <h4>Armani Beauty</h4>
+                <p>Luminous Silk Cheek Tint</p>
+                <h5>$39.00</h5>
+            </div>
+        </div>
+    </div><br>
+   <div id="newarival">
+        <div>
+            <h2>New Arrivals</h2>
+        </div>
+        <div>
+            <a href="">Show More</a>
+        </div>
+   </div>
+   <div id="newarivl">
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2778207-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>MAKEUP BY MARIO</h4>
+        <p>Softscrulpt Shaping Stick</p>
+        <h5>$32.00</h5>
+      </div>
+    </div>
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2761971-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>Rare Beauty by Selena Go...</h4>
+        <p>Mini soft Pinch Liquid</p>
+        <h5>$14.00</h5>
+      </div>
+    </div>
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2748333-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>Rare Beaty by Selena Go...</h4>
+        <p>soft Pinch Luminous Powder Blush</p>
+        <h5>$26.00</h5>
+      </div>
+    </div>
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2748341-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>The Ordinary</h4>
+        <p>Niacinamide 10%  Zin + Zinc 1% Oil control Serum</p>
+        <h5>$6.00 - $19.90</h5>
+      </div>
+    </div>
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2762045-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>Rare Beauty by Selena Go...</h4>
+        <p>Soft Pinch Liquid Blush</p>
+        <h5>$14.00  $23.00</h5>
+      </div>
+    </div>
+    <div class="imgnew">
+      <div>
+        <img src="https://www.sephora.com/productimages/sku/s2535581-main-zoom.jpg?imwidth=166" alt="">
+      </div>
+      <div class="textnew">
+        <h4>Glow Recipe</h4>
+        <p>Watermelon Glow PHA + BHA Pore- Tight Toner</p>
+        <h5>$16.00 - $35.00</h5>
+      </div>
+    </div>
+   </div><br>
+   
+   
+   <div id="middletree">
+    <div class="middle">
+      <div>
+        <img src="https://www.sephora.com/contentimages/2024-5-22-fenty-beauty-by-rihanna-softlit-foundation-site-app-home-page-RWD-marketing-banner-800x534-en-us-can.jpg?imwidth=400" alt="">
+
+      </div>
+      <div id="fenty">
+        <h4>Fenty Beauty by Rihanna soft'Lit Foundation</h4>
+        <p>A hydrating formula for glowy, medium coverage.</p>
+        <button><a href="">SHOW NOW</a>
+        </button>
+      </div>
+    </div>
+    <div class="middle">
+      <div>
+        <img src="https://www.sephora.com/contentimages/2024-5-22-sc-summer-24-site-desktop-home-page-rwd-marketing-banner-800x534-en-us.jpg?imwidth=400" alt="">
+
+      </div>
+      <div id="easy">
+        <h4>Your Easy, Effective Skincare</h4><br>
+        <p>Masks and lip care $10 and under.</p>
+        <button><a href="">SHOW NOW</a></button>
+      </div>
+    </div>
+    <div class="middle">
+      <div>
+        <img src="https://www.sephora.com/contentimages/2024-05-19-slotting-new-brands-at-sephora-site-rwd-home-page-marketing-banner-static-US-handoff_01.jpg?imwidth=400" alt="">
+
+      </div>
+      <div id="they">
+        <h4>They're Here!</h4><br>
+        <p>Hot names in beauty__now at Sephora.</p>
+        <button><a href="">SHOW NOW</a></button>
+      </div>
+    </div>
+   </div>
+   <div id="featured">
+    <div id="leftfeatured">
+      <h3>Featured Categories</h3>
+      <p>Shop what’s popular now.</p>
+    </div>
+    <div id="rightfeatured">
+        <div>
+          <p>Blush</p>
+          <img src="https://www.sephora.com/contentimages/homepage/031524/tools@3x.png?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Serums</p>
+          <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_skincare_cleanser_moisturizer_us_ca_rwd_slice.jpg?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Hair Styling & treatments</p>
+          <img src="https://www.sephora.com/contentimages/homepage/091322/Homepage/RWD/hair%20dryer.JPG?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Perfume</p>
+          <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_fragrance_bottle_us_ca_rwd_slice.jpg?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Minis</p>
+          <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_minis_us_ca_rwd_slice.png?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Sephora Collection</p>
+          <img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_sephoracollection_SC_us_ca_rwd_slice.jpg?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Trending on Social</p>
+          <img src="https://www.sephora.com/contentimages/homepage/010124/star%20trending.JPG?imwidth=53" alt="">
+        </div>
+        <div>
+          <p>Sale</p>
+          <img src="https://www.sephora.com/contentimages/categorybanners/RWD/icons/sale%2032@3x.jpg?imwidth=53" alt="">
+        </div>
+    </div>
+   </div>
+   <div id="little">
+    <div class="leftlittle">
+      <h3>Need a Little Guidance?</h3>
+      <p>Check out our <span><a href="">quizzes and buying guides.</a></span></p>
+    </div>
+    <div id="rightlittle">
+      <div class="txtimglit">
+        <div><p>Clean + Planet Aware at Sephora</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/041624/cleanplanet.JPG?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Black Owned Brands</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_BOB_us_rwd_slice.png?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Value Size Beauty</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/111023/value%20size%2032@3x-1280x1280.png?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Find Your Perfect Foundation</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/010124/foundation.JPG?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Skincare Routine Builder</p>
+        </div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/010124/hair%20girl.JPG?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Shiny Hair Guide</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/060222/Homepage/RWD/CategoryTiles/homepage_featured_category_tile_healthy%20scalp%20guide_us_ca_rwd_slice.png?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Fragrance Hub</p></div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/010124/fragrance%20hub.JPG?imwidth=53" alt=""></div>
+      </div>
+      <div class="txtimglit">
+        <div><p>Gifts</p>
+        </div>
+        <div class="imagetag"><img src="https://www.sephora.com/contentimages/homepage/092022/Homepage/RWD/gifts%2032@3x.png?imwidth=53" alt=""></div>
+      </div>
+    </div>
+   </div>
+
+   <!-- Footer START -->
+   
+   <div id="flink">
+    <h5>Website feedback? Let us know<span class="material-symbols-outlined">
+      arrow_right
+      </span></h5>
+   </div>
+   <div id="footerlast">
+    <div>
+      <p><b>About Sephora</b></p>
+      <p><a href="">About sephora</a></p>
+      <p><a href="">Newsroom</a></p>
+      <p><a href="">Careers</a></p>
+      <p><a href="">sephora Values</a></p>
+      <p><a href="">Supply Chain Transparency</a></p>
+      <p><a href="">Affiliates</a></p>
+      <p><a href="">Sephora Events</a></p>
+      <p><a href="">Gift Cards</a></p>
+      <p><a href="">Sephora Global sites</a></p>
+      <p><a href="">Diversity, Equity & Inclusion</a></p>
+      <p><a href="">Sephora Accelerate</a></p>
+      <p><a href="">Beauty(Re)Purposed</a></p>
+      <p><a href="">Report a Vulnerability</a></p>
+    </div>
+    <div>
+      <p><b>My Sephora</b></p>
+      <p><a href="">Beauty Insider</a></p>
+      <p><a href="">Sephora Credit Card</a></p>
+      <p><a href="">Community Profile</a></p>
+      <p><a href="">Order Status</a></p>
+      <p><a href="">Purchase History</a></p>
+      <p><a href="">Account Settings</a></p>
+      <p><a href="">Beauty Advisor Recommendatins</a></p>
+      <p><a href="">Auto-Replenishment</a></p>
+      <p><a href="">Beauty Offers</a></p>
+      <p><a href="">Quizzes & Buying Guides</a></p>
+      <p><a href="">Rewards Bazaar</a></p>
+      <p><a href="">Loves</a></p>
+      <p><a href="">Book a Reservation</a></p>
+    </div>
+    <div>
+      <p><b>Help</b></p>
+      <p><a href="">Customer Service</a></p>
+      <p><a href="">Returns & Exchanges</a></p>
+      <p><a href="">Delivery and Pickup Options</a></p>
+      <p><a href="">Shipping</a></p>
+      <p><a href="">Billing</a></p>
+      <p><a href="">International Shipments</a></p>
+      <p><a href="">Beauty Services FAQ</a></p>
+      <p><a href="">Sephora at Kohl's</a></p>
+      <p><a href="">Store Locations</a></p>
+      <p><a href="">Online Ordering</a></p>
+      <p><a href="">Klama & Afterpay</a></p>
+      <p><a href="">Accessibility</a></p>
+    </div>
+    <div>
+      <p><b>Region & Language</b></p>
+      <div><img src="https://www.sephora.com/img/ufe/flags/us.svg" alt="">
+        <a href="">US-ENG</a>
+      </div>
+      <div>
+        <img src="https://www.sephora.com/img/ufe/flags/ca.svg" alt="">
+        <a href="">Can-ENG</a>
+      </div>
+      <div>
+        <img src="https://www.sephora.com/img/ufe/flags/ca.svg" alt="">
+        <a href="">Canada</a>
+      </div>
+    </div>
+    <div>
+      <h3><b>We Belong to
+        Something Beautiful</b></h3>
+    </div>
+    
+   </div>
+   <div id="lastfooter">
+    <div>
+      <p>© 2024 Sephora USA, Inc. All rights reserved.</p>
+      <div>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms of Use</a>
+        <a href="">Accessibility</a>
+        <a href="">Sitemap</a>
+        <a href="">Your Privacy Choices</a>
+      </div>
+      <p>1-877-737-4672    TTY: 1-888-866-9845</p>
+      </div>
+    <div  id="flexfooter">
+      <div><img src="https://www.sephora.com/img/ufe/icons/instagram-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/facebook-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/twitter-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/youtube-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/pinterest-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/snapchat-ko.svg" alt=""></div>
+      <div><img src="https://www.sephora.com/img/ufe/icons/tiktok-ko.svg" alt=""></div>
+    </div>
+   </div>
+
+<!-- Footer End -->
+
+  </div>
+</body>
+</html>
+<script src="index.js"></script>
+
